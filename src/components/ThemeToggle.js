@@ -32,7 +32,7 @@ export default function ThemeToggle() {
 
   return (
     <div className="relative inline-block">
-      <Button onClick={toggleTheme} className="relative z-10 flex items-center gap-2">
+      <Button onClick={toggleTheme} className="relative z-10 flex items-center gap-2 h-8 w-8">
         {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
       </Button>
       {animate && waveCoords && (

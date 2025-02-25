@@ -38,7 +38,7 @@ export default function DeleteButton({ transactionId, onDelete }) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="destructive" className="p-2"><Trash /></Button>
+        <Button variant="destructive" title="Delete Transaction" className="p-2"><Trash />  Delete</Button>
       </DialogTrigger>
       <DialogContent className="bg-white">
         <DialogHeader>

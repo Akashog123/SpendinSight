@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 export async function PUT(request, { params }) {
   await dbConnect();
   try {
-    const { id } = params;
+    const { id } = await params;
     const body = await request.json();
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -31,7 +31,7 @@ export async function PUT(request, { params }) {
 export async function DELETE(request, { params }) {
   await dbConnect();
   try {
-    const { id } = params;
+    const { id } = await params;
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return new Response(JSON.stringify({ error: 'Invalid transaction ID' }), { status: 400 });
